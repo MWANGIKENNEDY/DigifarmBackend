@@ -13,9 +13,9 @@ import java.util.Optional;
  * @author user
  */
 public interface UserService {
-    public void addUser(UsersModel usersModel);
+    public UsersModel addUser(UsersModel usersModel);
     public List<UsersModel> getAllUsers();
     public Optional<UsersModel> getOneUser(Long id);
-    public void updateUser(UsersModel usersModel);
+    public UsersModel updateUser(UsersModel usersModel);
     public void deleteUser(Long id);
 }

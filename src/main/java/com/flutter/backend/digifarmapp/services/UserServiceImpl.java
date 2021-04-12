@@ -21,11 +21,6 @@ public class UserServiceImpl implements UserService{
     UserRepository userRepository;
 
     @Override
-    public void addUser(UsersModel usersModel) {
-        userRepository.save(usersModel); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public List<UsersModel> getAllUsers() {
         return userRepository.findAll(); //To change body of generated methods, choose Tools | Templates.
     }
@@ -36,13 +31,18 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public void updateUser(UsersModel usersModel) {
-        userRepository.save(usersModel); //To change body of generated methods, choose Tools | Templates.
+    public UsersModel addUser(UsersModel usersModel) {
+        return userRepository.save(usersModel); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public UsersModel updateUser(UsersModel usersModel) {
+        return userRepository.save(usersModel);//To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void deleteUser(Long id) {
-        userRepository.deleteById(id);//To change body of generated methods, choose Tools | Templates.
+        userRepository.deleteById(id);
     }
     
 }
